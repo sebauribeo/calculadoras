@@ -10,7 +10,7 @@ padding: 0;
     margin: 200px auto;
     padding: 20px;
     border-radius: 25px;
-    background-color: rgb(190, 44, 44);
+    background-color: rgb(165, 31, 31);
 }
 
 .screen {
@@ -22,6 +22,7 @@ padding: 0;
     padding-top: 30px;
     border-radius: 25px;
     border: 2px solid black;
+    font-size: 35px;
 }
 
 .buttons {
