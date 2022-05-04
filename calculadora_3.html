@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table id="buttons">
+      <tr>
+        <td>
+          <button data-key="+">+</button>
+        </td>
+        <td>
+          <button data-key="-">-</button>
+        </td>
+        <td>
+          <button data-key="/">/</button>
+        </td>
+        <td>
+          <button data-key="*">x</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button data-key="1">1</button>
+        </td>
+        <td>
+          <button data-key="2">2</button>
+        </td>
+        <td>
+          <button data-key="3">3</button>
+        </td>
+        <td>
+          <button data-key="clear">C</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button data-key="4">4</button>
+        </td>
+        <td>
+          <button data-key="5">5</button>
+        </td>
+        <td>
+          <button data-key="6">6</button>
+        </td>
+        <td>
+          <button data-key=".">.</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button data-key="7">7</button>
+        </td>
+        <td>
+          <button data-key="8">8</button>
+        </td>
+        <td>
+          <button data-key="9">9</button>
+        </td>
+        <td>
+          <button data-key="0">0</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button data-key="equal">=</button>
+        </td>
+      </tr>
+    </table>
+    <div class="screen" id="screen"></div>
+
+    <script>
+      let screen = document.getElementById("screen");
+      const buttons = document.querySelectorAll("#buttons button");
+
+      for (const button of buttons) {
+        button.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          if (e.target.dataset.key == "equal") {
+            screen.textContent = eval(screen.textContent);
+            if (screen.textContent.length > 8) {
+              screen.textContent = eval(screen.textContent).toFixed(8);
+            }
+          } else if (e.target.dataset.key == "clear") {
+            screen.textContent = "";
+          } else {
+            screen.textContent = screen.textContent + e.target.dataset.key;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

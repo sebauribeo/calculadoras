@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="n11" placeholder="n1" />
+    <input type="text" id="n22" placeholder="n2" />
+    <button id="suma">+</button>
+    <button id="resta">-</button>
+    <button id="division">/</button>
+    <button id="multiplicacion">*</button>
+    <button id="igual">=</button>
+    <output id="resultado"></output>    
+    <script>
+        let op;
+        document.querySelector('#suma').addEventListener('click', () =>{op = '+'})
+        document.querySelector('#resta').addEventListener('click', () =>{op = '-'})
+        document.querySelector('#division').addEventListener('click', () =>{op = '/'})
+        document.querySelector('#multiplicacion').addEventListener('click', () =>{op = '*'})
+        document.querySelector('#igual').addEventListener('click', () =>{
+            const n1 = parseInt(document.querySelector("#n11").value);
+            const n2 = parseInt(document.querySelector("#n22").value);
+            let r;
+            if (op == "+") {
+              r = n1 + n2;
+            } else if (op == "-") {
+              r = n1 + n2;
+            } else if (op == "/") {
+              r = n1 + n2;
+            } else if (op == "*") {
+              r = n1 + n2;
+            }
+            console.log(r);
+
+            document.querySelector("#resultado").innerHTML = r;
+
+        })
+    </script>
+  </body>
+</html>
