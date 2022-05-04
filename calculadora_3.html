@@ -4,73 +4,78 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
   </head>
   <body>
-    <table id="buttons">
-      <tr>
-        <td>
-          <button data-key="+">+</button>
-        </td>
-        <td>
-          <button data-key="-">-</button>
-        </td>
-        <td>
-          <button data-key="/">/</button>
-        </td>
-        <td>
-          <button data-key="*">x</button>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button data-key="1">1</button>
-        </td>
-        <td>
-          <button data-key="2">2</button>
-        </td>
-        <td>
-          <button data-key="3">3</button>
-        </td>
-        <td>
-          <button data-key="clear">C</button>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button data-key="4">4</button>
-        </td>
-        <td>
-          <button data-key="5">5</button>
-        </td>
-        <td>
-          <button data-key="6">6</button>
-        </td>
-        <td>
-          <button data-key=".">.</button>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button data-key="7">7</button>
-        </td>
-        <td>
-          <button data-key="8">8</button>
-        </td>
-        <td>
-          <button data-key="9">9</button>
-        </td>
-        <td>
-          <button data-key="0">0</button>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button data-key="equal">=</button>
-        </td>
-      </tr>
-    </table>
-    <div class="screen" id="screen"></div>
+    <div class="calculadora">
+      <div class="screen" id="screen"></div>
+
+      <table id="buttons" class="buttons">
+        <tr>
+          <td>
+            <button data-key="+">+</button>
+          </td>
+          <td>
+            <button data-key="-">-</button>
+          </td>
+          <td>
+            <button data-key="/">/</button>
+          </td>
+          <td>
+            <button data-key="*">x</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button data-key="1">1</button>
+          </td>
+          <td>
+            <button data-key="2">2</button>
+          </td>
+          <td>
+            <button data-key="3">3</button>
+          </td>
+          <td>
+            <button data-key="clear">C</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button data-key="4">4</button>
+          </td>
+          <td>
+            <button data-key="5">5</button>
+          </td>
+          <td>
+            <button data-key="6">6</button>
+          </td>
+          <td>
+            <button data-key=".">.</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button data-key="7">7</button>
+          </td>
+          <td>
+            <button data-key="8">8</button>
+          </td>
+          <td>
+            <button data-key="9">9</button>
+          </td>
+          <td>
+            <button data-key="0">0</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button data-key="equal" class="equal">=</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
 
     <script>
       let screen = document.getElementById("screen");

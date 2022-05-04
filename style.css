@@ -1,5 +1,42 @@
 body {
-    display: flex;
-    align-content: center;
-    justify-items: center;
+margin: 0;
+padding: 0;
 }
+
+.calculadora {
+    width: 300px;
+    height: 430px;
+    border: 3px solid black;
+    margin: 200px auto;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: rgb(190, 44, 44);
+}
+
+.screen {
+    height: 50px;
+    width: 300px;
+    color: white;
+    background-color: rgb(44, 92, 5);
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 25px;
+    border: 2px solid black;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    width: 70px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+}
+
+/* .equal {
+    width: 200px;
+    margin: 5px 50px;
+} */
