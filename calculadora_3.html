@@ -14,63 +14,69 @@
       <table id="buttons" class="buttons">
         <tr>
           <td>
-            <button data-key="+">+</button>
+            <button>+</button>
           </td>
           <td>
-            <button data-key="-">-</button>
+            <button>-</button>
           </td>
           <td>
-            <button data-key="/">/</button>
+            <button>/</button>
           </td>
           <td>
-            <button data-key="*">x</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button data-key="1">1</button>
-          </td>
-          <td>
-            <button data-key="2">2</button>
-          </td>
-          <td>
-            <button data-key="3">3</button>
-          </td>
-          <td>
-            <button data-key="clear">C</button>
+            <button>*</button>
           </td>
         </tr>
         <tr>
           <td>
-            <button data-key="4">4</button>
+            <button>1</button>
           </td>
           <td>
-            <button data-key="5">5</button>
+            <button>2</button>
           </td>
           <td>
-            <button data-key="6">6</button>
+            <button>3</button>
           </td>
           <td>
-            <button data-key=".">.</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button data-key="7">7</button>
-          </td>
-          <td>
-            <button data-key="8">8</button>
-          </td>
-          <td>
-            <button data-key="9">9</button>
-          </td>
-          <td>
-            <button data-key="0">0</button>
+            <button>C</button>
           </td>
         </tr>
         <tr>
           <td>
-            <button data-key="equal" class="equal">=</button>
+            <button>4</button>
+          </td>
+          <td>
+            <button>5</button>
+          </td>
+          <td>
+            <button>6</button>
+          </td>
+          <td>
+            <button>.</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button>7</button>
+          </td>
+          <td>
+            <button>8</button>
+          </td>
+          <td>
+            <button>9</button>
+          </td>
+          <td>
+            <button>0</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button>=</button>
+          </td>
+          <td>
+            <button>(</button>
+          </td>
+          <td>
+            <button>)</button>
           </td>
         </tr>
       </table>
@@ -82,18 +88,13 @@
       const buttons = document.querySelectorAll("#buttons button");
 
       for (const button of buttons) {
-        button.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          if (e.target.dataset.key == "equal") {
+        button.addEventListener("click", (data) => {
+          if (data.target.innerHTML == "=") {
             screen.textContent = eval(screen.textContent);
-            if (screen.textContent.length > 8) {
-              screen.textContent = eval(screen.textContent).toFixed(8);
-            }
-          } else if (e.target.dataset.key == "clear") {
+          } else if (data.target.innerHTML == "C") {
             screen.textContent = "";
           } else {
-            screen.textContent = screen.textContent + e.target.dataset.key;
+            screen.textContent = screen.textContent + data.target.innerHTML;
           }
         });
       }
